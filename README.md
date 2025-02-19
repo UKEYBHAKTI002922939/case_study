@@ -1,6 +1,6 @@
-# Bhakti Study: Search Application
+# Content Search Application
 
-**Bhakti Study** is a search application that implements three different search relevance models:
+This is a search application that implements three different search relevance models:
 
 - **TF-IDF Model:** Uses TF-IDF vectorization to compute text similarity.
 - **Sentence Transformer Model:** Uses state-of-the-art Sentence Transformers for semantic similarity.
@@ -9,8 +9,6 @@
 
 
 This repository follows a modular design. Common functionalities (data loading, preprocessing, evaluation, recommendation generation, and logging) are encapsulated in classes within the `components` folder, while each search model has its own implementation in the `utils` folder.
-
-## Repository Structure
 
 
 ## Installation
@@ -22,28 +20,33 @@ This repository follows a modular design. Common functionalities (data loading, 
    cd bhakti_study
 
 2. **Create and Activate a Virtual Environment (Optional but Recommended)**
+
+   ```bash
    python -m venv venv
    source venv/bin/activate       # On Windows: venv\Scripts\activate
 
+
 3. **Install Dependencies**
+
+   ```bash
    pip install -r requirements.txt
 
 **Alternatively, install the package in editable mode:**
-   pip install -e .
+
+    pip install -e .
 
 
 ## Usage
 
 **Run the search application using the job_runner.py script. Use the --model flag to select the model:**
-# TF-IDF Model:
-   
-   python job_runner.py --model tfidf
+### TF-IDF Model:
 
-# Sentence Transformer Model:
-   
+    python job_runner.py --model tfidf
+
+### Sentence Transformer Model:
    python job_runner.py --model sentence
 
-# Hybrid Model:
+### Hybrid Model:
 
    python job_runner.py --model hybrid
 
