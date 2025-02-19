@@ -1,0 +1,9 @@
+pandas
+numpy==1.26.4
+scikit-learn
+sentence-transformers
+scipy
+transformers
+torch
+tabulate
+-e .
