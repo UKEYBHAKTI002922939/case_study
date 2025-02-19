@@ -1,0 +1,30 @@
+[2025-02-19 02:35:08,195] root - INFO - Starting job_runner...
+[2025-02-19 02:35:08,195] bhakti_study.components.common - INFO - Loading content data from /Users/bhaktiukey/Documents/case_assignment/case_study/bhakti_study/data/raw/content_data_MASTER.csv
+[2025-02-19 02:35:08,200] bhakti_study.components.common - INFO - Loading labels data from /Users/bhaktiukey/Documents/case_assignment/case_study/bhakti_study/data/raw/labels_MASTER.csv
+[2025-02-19 02:35:08,201] bhakti_study.components.common - INFO - Loading test data from /Users/bhaktiukey/Documents/case_assignment/case_study/bhakti_study/data/raw/test_MASTER.csv
+[2025-02-19 02:35:08,202] bhakti_study.components.common - INFO - Renaming columns in labels data
+[2025-02-19 02:35:08,202] bhakti_study.components.common - INFO - Merging content and labels data
+[2025-02-19 02:35:08,204] bhakti_study.components.common - INFO - Dropping rows with missing titles, duplicates and resetting index
+[2025-02-19 02:35:08,206] bhakti_study.components.common - INFO - Data loaded successfully
+[2025-02-19 02:35:08,206] root - INFO - Data loaded successfully.
+[2025-02-19 02:35:08,206] bhakti_study.components.common - INFO - Starting text preprocessing for labels data
+[2025-02-19 02:35:08,210] bhakti_study.components.common - INFO - Text preprocessing complete
+[2025-02-19 02:35:08,210] root - INFO - Data preprocessing complete.
+[2025-02-19 02:35:08,210] root - INFO - Initializing TF-IDF model...
+[2025-02-19 02:35:08,214] root - INFO - Running tfidf model...
+[2025-02-19 02:35:08,214] bhakti_study.components.common - INFO - Finding best threshold for classifying documents
+[2025-02-19 02:35:12,585] bhakti_study.components.common - INFO - Best threshold found: 0.35000000000000003 with macro F1: 0.6078363583981561
+[2025-02-19 02:35:12,585] bhakti_study.components.common - INFO - Evaluating model performance using threshold: 0.35000000000000003
+[2025-02-19 02:35:12,632] bhakti_study.components.common - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+NOT RELEVANT       0.55      0.28      0.37        43
+    RELEVANT       0.78      0.92      0.85       123
+
+    accuracy                           0.75       166
+   macro avg       0.67      0.60      0.61       166
+weighted avg       0.72      0.75      0.72       166
+
+[2025-02-19 02:35:12,632] bhakti_study.components.common - INFO - Generating recommendations for test data
+[2025-02-19 02:35:12,634] bhakti_study.components.common - INFO - Recommendations generated successfully
+[2025-02-19 02:35:12,635] root - INFO - Model tfidf finished.

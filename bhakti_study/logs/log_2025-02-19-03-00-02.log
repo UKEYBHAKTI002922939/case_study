@@ -1,0 +1,32 @@
+[2025-02-19 03:00:05,525] root - INFO - Starting job_runner...
+[2025-02-19 03:00:05,525] bhakti_study.components.common - INFO - Loading content data from /Users/bhaktiukey/Documents/case_assignment/case_study/bhakti_study/data/raw/content_data_MASTER.csv
+[2025-02-19 03:00:05,531] bhakti_study.components.common - INFO - Loading labels data from /Users/bhaktiukey/Documents/case_assignment/case_study/bhakti_study/data/raw/labels_MASTER.csv
+[2025-02-19 03:00:05,532] bhakti_study.components.common - INFO - Loading test data from /Users/bhaktiukey/Documents/case_assignment/case_study/bhakti_study/data/raw/test_MASTER.csv
+[2025-02-19 03:00:05,532] bhakti_study.components.common - INFO - Renaming columns in labels data
+[2025-02-19 03:00:05,533] bhakti_study.components.common - INFO - Merging content and labels data
+[2025-02-19 03:00:05,537] bhakti_study.components.common - INFO - Dropping rows with missing titles, duplicates and resetting index
+[2025-02-19 03:00:05,538] bhakti_study.components.common - INFO - Data loaded successfully
+[2025-02-19 03:00:05,538] root - INFO - Data loaded successfully.
+[2025-02-19 03:00:05,538] bhakti_study.components.common - INFO - Starting text preprocessing for labels data
+[2025-02-19 03:00:05,542] bhakti_study.components.common - INFO - Text preprocessing complete
+[2025-02-19 03:00:05,542] root - INFO - Data preprocessing complete.
+[2025-02-19 03:00:05,542] root - INFO - Initializing Hybrid model...
+[2025-02-19 03:00:05,556] sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+[2025-02-19 03:00:05,556] sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-02-19 03:00:07,652] root - INFO - Running hybrid model...
+[2025-02-19 03:00:07,652] bhakti_study.components.common - INFO - Finding best threshold for classifying documents
+[2025-02-19 03:04:04,260] bhakti_study.components.common - INFO - Best threshold found: 0.25 with macro F1: 0.7408631772268136
+[2025-02-19 03:04:04,261] bhakti_study.components.common - INFO - Evaluating model performance using threshold: 0.25
+[2025-02-19 03:04:06,845] bhakti_study.components.common - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+NOT RELEVANT       0.60      0.65      0.62        43
+    RELEVANT       0.87      0.85      0.86       123
+
+    accuracy                           0.80       166
+   macro avg       0.73      0.75      0.74       166
+weighted avg       0.80      0.80      0.80       166
+
+[2025-02-19 03:04:06,845] bhakti_study.components.common - INFO - Generating recommendations for test data
+[2025-02-19 03:04:06,951] bhakti_study.components.common - INFO - Recommendations generated successfully
+[2025-02-19 03:04:06,955] root - INFO - Model hybrid finished.
